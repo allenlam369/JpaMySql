@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Meta-Persistence: META-INF/persistence.xml
+Created-By: Allen Lam
+
+Embedded-Artifacts: javax.persistence-2.2.3.jar;g="org.eclipse.persistence";a="javax.persistence";v="2.2.3"
+ 
+Name: epd/JpaMySql/
+Sealed: true
+
+Main-Class: epd.AddItems
+Class-Path: eclipselink.jar jakarta.persistence-api.jar

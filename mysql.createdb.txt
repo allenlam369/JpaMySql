@@ -1,0 +1,28 @@
+mysql -u root -p
+ENTER YOUR PASSWORD HERE
+mysql>  PASTE THE SCRIPT CONTENTS HERE
+drop database quickstart;
+create database quickstart;
+use quickstart;
+flush privileges;
+CREATE TABLE `quickstart`.`DEPARTMENT_PERSON` (
+  `Department_DEPT_ID` int unsigned not null auto_increment,
+  `persons_PERSON_ID` int not null,
+   PRIMARY KEY(`Department_DEPT_ID`, `persons_PERSON_ID`)       
+)
+ENGINE = InnoDB;
+CREATE TABLE `quickstart`.`PERSON` (
+  `PERSON_ID` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  `firstName` VARCHAR(45) NOT NULL,
+  `lastName` VARCHAR(45) NOT NULL,
+  `friends` VARCHAR(45) NOT NULL,
+  PRIMARY KEY(`PERSON_ID`)
+)
+ENGINE = InnoDB;
+CREATE TABLE `quickstart`.`DEPARTMENT` (
+  `DEPT_ID` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  PRIMARY KEY(`DEPT_ID`),
+  UNIQUE(`name`)
+)
+ENGINE = InnoDB;
